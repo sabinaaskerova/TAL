@@ -3,8 +3,13 @@ import os
 import requests
 import spacy
 
-filename = os.getcwd()+'/data/train.tsv'
-df = pd.read_csv(filename, sep='\t')
+filename1 = '../data/train.tsv'
+df1 = pd.read_csv(filename1, sep='\t')
+filename2 = '../data/test.tsv'
+df2 = pd.read_csv(filename2, sep='\t')
+df = pd.concat([df1, df2])
+df = df.reset_index(drop=True)
+
 url = "http://localhost:8983/solr/african_french_press/update"
 
 nlp = spacy.load("fr_core_news_sm")
