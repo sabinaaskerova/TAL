@@ -1,0 +1,7 @@
+pandas
+pip
+scikit-learn
+matplotlib
+nltk
+seaborn
+spacy
