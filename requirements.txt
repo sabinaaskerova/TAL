@@ -5,3 +5,4 @@ matplotlib
 nltk
 seaborn
 spacy
+imblearn
